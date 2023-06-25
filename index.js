@@ -21,7 +21,9 @@ app.use(express.json());
 //adding api routes
 app.use('/api/',apiRoutes);
 app.use('/api/',AuthMiddleware,apiAuthRoutes);
-
+app.get('/',(req,res)=>{
+  res.send("Welcome to server!!");
+});
 
 //running server 
 app.listen(PORT,()=>console.log("Server is running at port : " + PORT));

@@ -14,7 +14,7 @@ export const apiAuthRoutes = express.Router();
 
 
 apiRoutes.get('/',(req,res)=>{
-    res.send("Welcome to server!!");
+    res.send("Welcome to api server!!");
 });
 apiRoutes.post('/register',RegisterRule,Register); 
 apiRoutes.post('/login',LoginRule,userLogin);
