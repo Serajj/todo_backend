@@ -36,7 +36,7 @@ const Register = async (req,res)=> {
       }
     }
     //used mapped to remove array layer
-    return res.json(jsonResponse(false,"validation error",errors.mapped()));
+    return res.json(jsonResponse(false,"validation error",errors.mapped(),201));
 };
 
 const Login = async (req,res)=> {

@@ -26,7 +26,7 @@ export const createTodo = async (req,res)=>{
     
        }
     } 
-    return res.json(jsonResponse(false,"validation error",errors.mapped()));
+    return res.json(jsonResponse(false,"validation error",errors.mapped(),201));
 }
 
 //mark complete/incomplete a todo
@@ -51,7 +51,7 @@ export const markTodo = async (req,res)=>{
     
        }
     }
-    return res.json(jsonResponse(false,"validation error",errors.mapped()));
+    return res.json(jsonResponse(false,"validation error",errors.mapped(),201));
 }
 
 //delete a todo
@@ -72,5 +72,5 @@ export const deleteTodo = async (req,res)=>{
     
        }
     }
-    return res.json(jsonResponse(false,"validation error",errors.mapped()));
+    return res.json(jsonResponse(false,"validation error",errors.mapped(),201));
 }
