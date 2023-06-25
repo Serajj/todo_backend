@@ -4,7 +4,7 @@ import apiRoutes, { apiAuthRoutes } from "./src/utils/api.js";
 import mongoose from "mongoose";
 import { MONGO_DB_URL } from "./src/utils/constants.js";
 import AuthMiddleware from "./src/middlewares/AuthMiddleware.js";
-
+import cors from 'cors';
 const app = express();
 const PORT = 8000;
 
@@ -16,6 +16,8 @@ mongoose.connect(MONGO_DB_URL,{useNewUrlParser:true}).then(() => {
     console.error('Failed to connect to MongoDB:', error);
   });
 
+//cors
+app.use(cors());
 //to parse the request body
 app.use(express.json());
 //adding api routes
