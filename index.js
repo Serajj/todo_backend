@@ -1,9 +1,9 @@
 
 import express from "express";
-import apiRoutes, { apiAuthRoutes } from "./utils/api.js";
+import apiRoutes, { apiAuthRoutes } from "./src/utils/api.js";
 import mongoose from "mongoose";
-import { MONGO_DB_URL } from "./utils/constants.js";
-import AuthMiddleware from "./middlewares/AuthMiddleware.js";
+import { MONGO_DB_URL } from "./src/utils/constants.js";
+import AuthMiddleware from "./src/middlewares/AuthMiddleware.js";
 
 const app = express();
 const PORT = 8000;
